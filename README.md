@@ -21,7 +21,7 @@ The dataset used contains noisy facial images as well as corresponding clean ima
 
 - **U-Net**: The U-Net architecture is utilized for image-to-image translation, specifically for denoising facial images. U-Net consists of an encoder-decoder network with skip connections to preserve spatial information.
 
-  ![](D:\Machine Learning Project\FACIAL_IMAGE_DENOISING_UNET\architecture_img\unet_architecture.png)
+  ![]([D:\Machine Learning Project\FACIAL_IMAGE_DENOISING_UNET\architecture_img\unet_architecture.png](https://github.com/mauluddin12z/FACIAL_IMAGE_DENOISING_UNET/blob/main/architecture_img/unet_architecture.png))
 
 ### Training
 
