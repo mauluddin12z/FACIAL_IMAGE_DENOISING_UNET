@@ -1,35 +1,49 @@
-# Facial Image Denoising using U-Net
+#  Facial Image Denoising using U-Net
 
-This project focuses on denoising facial images using the U-Net architecture. The U-Net model is trained to remove noise from facial images, enhancing their quality and clarity.
+This project focuses on enhancing the quality of facial images by removing noise using the U-Net architecture.
 
 ## Introduction
 
-Denoising facial images is important for various applications, including image processing and computer vision tasks. This project demonstrates the use of deep learning techniques, specifically the U-Net model, for facial image denoising.
+Denoising facial images is essential for improving image quality in various applications, including image processing and computer vision tasks. This project demonstrates the application of deep learning techniques, specifically the U-Net model, for facial image denoising.
 
 ## Methodology
 
 ### Data Collection
 
-The dataset used contains noisy facial images as well as corresponding clean images for training the denoising model.
+The dataset utilized for this project comprises noisy facial images and corresponding clean images, facilitating the training of a facial image denoising model. Specifically:
+
+- **Dataset**: FFHQ (Flickr-Faces-HQ) dataset of 128 x 128 pixel-sized facial images.
+
+- **Noise Synthesis**: Synthetic noise is applied to the clean images using a noise factor of 0.3 to create noisy counterparts.
+
+- Data Size
+
+  : A total of 10,000 image pairs are used:
+
+  - 8,000 images for training the model.
+  - 20% (1,600 images) reserved for validation during training.
+  - 2,000 images for testing the trained model.
+
+This dataset setup ensures a diverse and representative collection for training and evaluating the denoising model effectively.
 
 ### Data Preprocessing
 
-- Data augmentation techniques are applied to increase the diversity of the training dataset.
-- Image normalization and resizing are performed to prepare the data for training.
+- Data augmentation techniques are employed to diversify the training dataset.
+- Image normalization and resizing are conducted to prepare the data for training.
 
 ### Model Architecture
 
-- **U-Net**: The U-Net architecture is utilized for image-to-image translation, specifically for denoising facial images. U-Net consists of an encoder-decoder network with skip connections to preserve spatial information.
+- **U-Net**: The U-Net architecture is leveraged for image-to-image translation, specifically designed for denoising facial images. U-Net comprises an encoder-decoder network with skip connections, effectively preserving spatial information.
 
-  ![](https://github.com/mauluddin12z/FACIAL_IMAGE_DENOISING_UNET/blob/main/architecture_img/unet_architecture.png)
+  ![U-Net Architecture](https://github.com/mauluddin12z/FACIAL_IMAGE_DENOISING_UNET/blob/main/architecture_img/unet_architecture.png)
 
 ### Training
 
-- The U-Net model is trained on the noisy-clean image pairs using techniques like mean squared error (MSE) loss for optimization.
+- The U-Net model is trained on pairs of noisy and clean images using mean squared error (MSE) loss for optimization.
 
 ### Evaluation
 
-- The trained model is evaluated on a separate test set to measure its performance in terms of noise reduction and image quality improvement.
+- The performance of the trained model is assessed using **Peak Signal-to-Noise Ratio (PSNR)** and **Structural Similarity Index (SSIM)** metrics to quantify noise reduction and image quality improvement.
 
 ## Dependencies
 
@@ -41,11 +55,11 @@ Ensure you have the following dependencies installed:
 - OpenCV (for image processing)
 - matplotlib (for visualization)
 
+```
+bashCopy code
+pip install tensorflow==2.10 numpy opencv-python matplotlib
+```
+
 ## Acknowledgements
 
-- The dataset used for this project.
-- Any pre-trained models or libraries utilized for facial image denoising.
-
-## License
-
-This project is licensed under the MIT License.
+- The FFHQ dataset of 128x128 thumbnails used for this project.
